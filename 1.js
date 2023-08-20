@@ -2,6 +2,10 @@ const fulldate = new Date();
 let day = fulldate.getDay();
 console.log(fulldate.getDay());
 elem = document.getElementById('day_of_week');
+
+clock = document.getElementById('current_time');
+clock.innerHTML =  fulldate.getHours() + ":" + fulldate.getMinutes() + ":" +fulldate.getSeconds();
+
 switch (day) {
 
     case 0:
@@ -32,6 +36,3 @@ switch (day) {
         elem.innerHTML = ('<span>saturday</span>');
         break;
 }
-
-clock = document.getElementById('current_time');
-clock.innerHTML =  fulldate.getHours() + ":" + fulldate.getMinutes() + ":" +fulldate.getSeconds();
