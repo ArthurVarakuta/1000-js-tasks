@@ -1,6 +1,5 @@
 const fulldate = new Date();
 let day = fulldate.getDay();
-console.log(fulldate.getDay());
 elem = document.getElementById('day_of_week');
 
 clock = document.getElementById('current_time');

@@ -25,6 +25,4 @@ function single_digit_day_handler(day) {
     }
 }
 
-console.log(date.getDate());
 date_holder.innerHTML = single_digit_day_handler(day) + '.' + single_digit_month_handler(month) + '.' + date.getFullYear();
-console.log(date.getDate());
