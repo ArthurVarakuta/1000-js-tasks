@@ -9,16 +9,13 @@ let output = document.getElementById('output_reversed_word_task5');
 let btn_task5 = document.getElementById('reverse_button_task5');
 
 btn_task5.addEventListener('click', function () {
-    get_input_text();
-    input_text_reverter();
-
+    print_reverted_text();
 })
 
-function get_input_text(input_text) {
-    input_text= input.value;
-    return input_text;
+function print_reverted_text() {
+    output.innerHTML = input_text_reverter(input.value);
 }
 
-function input_text_reverter() {
-    output.innerHTML  = Array.from(get_input_text()).reverse();
+function input_text_reverter(input_text) {
+    return Array.from(input_text).reverse().join('');
 }
