@@ -17,9 +17,15 @@ btn.addEventListener('click', function () {
     print_rectangle_result();
 })
 
-function print_rectangle_result() {
+function get_rectangle_result() {
 
     output.innerHTML =   rectangle_calculate(input.value);
+
+
+
+}
+
+function print_rectangle_result() {
 
 
 
