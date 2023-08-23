@@ -9,32 +9,36 @@
 // console.log("Perimeter:", rectangleData.perimeter);  // 100 - периметр прямоугольника
 // console.log("Area:", rectangleData.area);  // 600 - площадь прямоугольника
 
-let input = document.getElementById('rectangle_sides_input');
+let input_a = document.getElementById('rectangle_side_a_input');
+let input_b = document.getElementById('rectangle_side_b_input');
 let output = document.getElementById('result_div');
 let btn = document.getElementById('result_button');
 
+
+
 btn.addEventListener('click', function () {
-    print_rectangle_result();
+print_rectangle_result();
 })
 
-function get_rectangle_result() {
 
-    output.innerHTML =   rectangle_calculate(input.value);
+function rectangle_calculate(width, height) {
+        function rect_Perimeter(width, height) {
+        let perimeter;
+        return perimeter = parseInt(width * 2 + height * 2);
+    }
 
+    function rect_Area(width_, height_) {
+        let area;
+        return area = parseInt(width * height);
 
+    }
 
+    return ' Rectangle area is: ' + rect_Area(width, height) + ' Rectangle perimeter is: ' + rect_Perimeter(width, height);
 }
 
 function print_rectangle_result() {
-
-
+    let width = input_a.value;
+    let height = input_b.value;
+    output.innerHTML = rectangle_calculate(width, height);
 
 }
-
-function rectangle_calculate(width, height) {
-
-    const rect_Perimeter = width * 2 + height * 2;
-    const rect_Area = width * height;
-    return{perimeter:rect_Perimeter, area: rect_Area};
-}
-
